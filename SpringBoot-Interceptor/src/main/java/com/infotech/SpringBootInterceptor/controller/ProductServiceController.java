@@ -30,4 +30,11 @@ public class ProductServiceController {
         System.out.println("Entering into API\n");
         return new ResponseEntity<>(productRepo.values(), HttpStatus.OK);
     }
+
+    @RequestMapping(value = "/items")
+    public ResponseEntity<Object> getItem() {
+
+        System.out.println("Entering into API\n");
+        return new ResponseEntity<>(productRepo.values(), HttpStatus.OK);
+    }
 }

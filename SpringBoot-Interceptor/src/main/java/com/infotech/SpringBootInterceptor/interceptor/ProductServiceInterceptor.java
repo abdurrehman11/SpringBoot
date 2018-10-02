@@ -10,6 +10,11 @@ import javax.servlet.http.HttpServletResponse;
 @Component
 public class ProductServiceInterceptor implements HandlerInterceptor {
 
+//    As a basic guideline, fine-grained handler-related preprocessing tasks are candidates for HandlerInterceptor
+//    implementations, especially factored-out common handler code and authorization checks. On the other hand, a Filter
+//    is well-suited for request content and view content handling, like multipart forms and GZIP compression. This typically
+//    shows when one needs to map the filter to certain content types (e.g. images), or to all requests.
+
     @Override
     public boolean preHandle
             (HttpServletRequest request, HttpServletResponse response, Object handler)
