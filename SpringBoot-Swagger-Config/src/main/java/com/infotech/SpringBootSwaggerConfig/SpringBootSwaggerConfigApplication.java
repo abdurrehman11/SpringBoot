@@ -19,6 +19,6 @@ public class SpringBootSwaggerConfigApplication {
 	@Bean
 	public Docket productApi() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
-				.apis(RequestHandlerSelectors.basePackage("com.infotech.SpringBootSwaggerConfig")).build();
+				.apis(RequestHandlerSelectors.basePackage("com.infotech.SpringBootSwaggerConfig.controller")).build();
 	}
 }
